@@ -1,0 +1,24 @@
+{
+    "name": "Dark mode toggler",
+    "description": "Change the theme of the page from light to dark or vice versa",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions":[
+        "activeTab",
+        "scripting"
+    ],
+    "background":{
+        "service-worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "extension.png"
+    },
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+
+}
